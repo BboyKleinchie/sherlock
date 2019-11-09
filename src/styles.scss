@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-blue: #43b2ff;
+    --color-blue-rgb: 67,178,255;
+    --color-dark: #0c1623;
+    --color-white: #fff;
+    --color-dark-2: #152233;
+    --color-dark-2-rgb: 21,34,51;
+
+    --border-radius: 100px;
+
+    --font-family-base: 'Helvetica', sans-serif;
+
+    --screen-size-mobile-width: 480px;
+
+    --spacing-xs: 4px;
+    --spacing-base: 8px;
+    --spacing-sm: 16px;
+
+    --box-shadow: 0 3px 3px 0 rgba(0,0,0,.2);
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: var(--screen-size-mobile-width);
+}
+
+.header {
+    height: 10vh;
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+.logo-box {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.logo,
+.menu {
+    height: 3rem;
+}
+
+.menu-elipsis {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.footer {
+    height: 30vh;
+    background-color: var(--color-dark);
+}
+
+@import './app/scoutmissions/scoutmission.component';
