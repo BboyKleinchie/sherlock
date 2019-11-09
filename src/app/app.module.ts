@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgxWebstorageModule } from 'ngx-webstorage';
+import { ScoutMissionModule } from './scoutmissions/scoutmission.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxWebstorageModule.forRoot({
+      prefix: '_sherlock.storage',
+      separator: '.',
+      caseSensitive: false
+    }),
+    ScoutMissionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

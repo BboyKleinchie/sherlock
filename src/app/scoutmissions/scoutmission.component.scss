@@ -1,0 +1,31 @@
+.scoutmission {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(var(--color-blue-rgb), 0.9) 0%, 
+        rgba(var(--color-dark-2-rgb), 0.9) 80%
+        ),
+        url('assets/farm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoutmission__card {
+    height: 25rem;
+    width: 30rem;
+    background-color: var(--color-white);
+
+    margin-top: 5rem;
+    padding: var(--spacing-xs);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+
+    &:last-child {
+        margin-bottom: 5rem;
+    }
+}
