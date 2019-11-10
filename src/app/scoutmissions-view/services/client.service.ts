@@ -13,10 +13,10 @@ export class ClientService implements IServiceGET<IClient> {
         private clientPersistence: ClientPersistence,
     ) { }
 
-    public getAll(): Promise<IClient[]> {
+    public async getAll(): Promise<IClient[]> {
         const clientCache: IClient[] = this.clientPersistence.retrieve();
         if (clientCache) { return Promise.resolve(clientCache); }
 
-        return this.serviceHelper.getAll(API_ENDPOINTS.CLIENT);
+        return this.serviceHelper.getAll(API_ENDPOINTS.CLIENTS);
     }
 }

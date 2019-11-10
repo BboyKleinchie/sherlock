@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 import { LOCAL_STORAGE_KEY } from '../constants/storage.constants';
 
 @Injectable()
-export abstract class PersistenceHelper<T> {
+export class PersistenceHelper<T> {
     constructor (private localStorageService: LocalStorageService) { }
 
     public retrieve(key: LOCAL_STORAGE_KEY): T[] {

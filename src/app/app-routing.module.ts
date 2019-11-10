@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ScoutMissionComponent } from './scoutmissions/scoutmission.component';
+import { ScoutMissionViewComponent } from './scoutmissions-view/scoutmission-view.component';
 
 const routes: Routes = [
-  {path: 'scoutmission', component: ScoutMissionComponent},
-  {path: '', pathMatch: 'full', redirectTo: 'scoutmission'},
+  {path: 'scoutmission-view', component: ScoutMissionViewComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'scoutmission-view'},
 ];
 
 @NgModule({

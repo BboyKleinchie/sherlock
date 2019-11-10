@@ -8,7 +8,7 @@ import { LOCAL_STORAGE_KEY } from '../../general/constants/storage.constants';
     Used to persist the data to Local Storage
 */
 @Injectable()
-export abstract class ClientPersistence {
+export class ClientPersistence {
     constructor (private persistenceHelper: PersistenceHelper<IClient>) { }
 
     public retrieve(): IClient[] {
