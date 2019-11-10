@@ -13,10 +13,10 @@ export class ScoutMissionService implements IServiceGET<IScoutMission> {
         private scoutMissionPersistence: ScoutMissionPersistence,
     ) { }
 
-    public getAll(): Promise<IScoutMission[]> {
+    public async getAll(): Promise<IScoutMission[]> {
         const scoutMissionCache = this.scoutMissionPersistence.retrieve();
         if(scoutMissionCache) { return Promise.resolve(scoutMissionCache); }
 
-        return this.serviceHelper.getAll(API_ENDPOINTS.SCOUT_MISSION);
+        return this.serviceHelper.getAll(API_ENDPOINTS.SCOUTMISSIONS);
     }
 }

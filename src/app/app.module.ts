@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
-import { ScoutMissionModule } from './scoutmissions/scoutmission.module';
+import { ScoutMissionViewModule } from './scoutmissions-view/scoutmission-view.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { ScoutMissionModule } from './scoutmissions/scoutmission.module';
       separator: '.',
       caseSensitive: false
     }),
-    ScoutMissionModule,
+    ScoutMissionViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SHERLOCK_API_PATH, AUTH_TOKEN, API_ENDPOINTS } from '../constants/api-paths';
 
 @Injectable()
-export abstract class ServiceHelper<T>{
+export class ServiceHelper<T>{
     constructor(private httpClient: HttpClient) { }
 
     public getAll(endpoint: API_ENDPOINTS): Promise<T[]> {
@@ -16,8 +16,12 @@ export abstract class ServiceHelper<T>{
                 this.httpClient
                     .get(url, { headers: httpHeaders })
                     .toPromise()
-                    .then((response: T[]) => {
-                        resolve(response);
+                    .then((response: any) => {
+                        if (response && response.results) {
+                            resolve(response.results as T[]);
+                        } else {
+                            reject(null);
+                        }
                     })
                     .catch((error: any) => {
                         reject(error);

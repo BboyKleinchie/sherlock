@@ -8,7 +8,7 @@ import { PersistenceHelper } from '../../general/persistence/persistence-helper'
     Used to persist the data to Local Storage
 */
 @Injectable()
-export abstract class ScoutMissionPersistence {
+export class ScoutMissionPersistence {
     constructor (private persistenceHelper: PersistenceHelper<IScoutMission>){ }
 
     public retrieve(): IScoutMission[] {
